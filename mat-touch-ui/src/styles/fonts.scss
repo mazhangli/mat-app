@@ -1,0 +1,37 @@
+/* 中文无衬线字体 */
+@font-face {
+  font-family: 'Source Han Sans CN';
+  font-style: normal;
+  font-weight: 700;
+  // 使用 @ 别名指向 src/assets/fonts/
+  src: url('@/assets/fonts/SourceHanSansSC-Bold-Alphabetic.woff2') format('woff2');
+}
+
+/* 数字/英文字体 */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@/assets/fonts/SourceHanSansSC-Regular-Alphabetic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('@/assets/fonts/SourceCodePro-bold.woff2') format('woff2');
+}
+
+/* 字体变量定义 */
+$font-family-chinese: 'Source Han Sans SC', sans-serif;
+$font-family-mono: 'Source Code Pro', monospace;
+
+/* 全局字体设置 */
+body {
+  font-family: $font-family-chinese, $font-family-mono !important;
+}
+
+/* 数字/英文专用样式 */
+.number, .en {
+  font-family: $font-family-mono, $font-family-chinese !important;
+}

@@ -1,0 +1,15 @@
+{
+  "background": "#F5F5F5",
+  "controls": {
+    "button": {
+      "background": "#1677FF",
+      "color": "#FFFFFF",
+      "borderRadius": "8px"
+    },
+    "input": {
+      "background": "#FFFFFF",
+      "borderColor": "#D9D9D9",
+      "color": "#333333"
+    }
+  }
+}

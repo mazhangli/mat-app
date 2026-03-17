@@ -1,0 +1,107 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/variables.scss" as *;
+@use "@/styles/fonts.scss" as *;
+@use "@/styles/button.scss" as *;
+
+//* 全局主题样式（CSS Variables 默认值） */
+:root {
+  /* ======= 基础颜色 ======= */
+  --mat-primary-color: #1677ff;
+  --mat-primary-hover: #4096ff;
+  --mat-primary-active: #0958d9;
+  --mat-primary-disabled: #86b7ff;
+
+  --mat-success-color: #52c41a;
+  --mat-success-hover: #73d13d;
+  --mat-success-active: #389e0d;
+  --mat-success-disabled: #b7eb8f;
+
+  --mat-warning-color: #faad14;
+  --mat-warning-hover: #ffc53d;
+  --mat-warning-active: #d48806;
+  --mat-warning-disabled: #ffd666;
+
+  --mat-danger-color: #ff4d4f;
+  --mat-danger-hover: #ff7875;
+  --mat-danger-active: #d9363e;
+  --mat-danger-disabled: #ffb3b3;
+
+  /* ======= 文本颜色 ======= */
+  --mat-text-color: #333333;
+  --mat-text-color-light: #666666;
+  --mat-text-color-placeholder: #999999;
+  --mat-text-color-inverse: #ffffff;
+
+  /* ======= 背景颜色 ======= */
+  --mat-bg-color: #f5f5f5;
+  --mat-bg-color-light: #ffffff;
+  --mat-bg-color-dark: #e8e8e8;
+  --mat-bg-color-disabled: #fafafa;
+
+  /* ======= 边框颜色 ======= */
+  --mat-border-color: #dddddd;
+  --mat-border-color-light: #e8e8e8;
+  --mat-border-color-dark: #d0d0d0;
+  --mat-border-color-active: #1677ff;
+
+  /* ======= 圆角 ======= */
+  --mat-border-radius: 8px;
+  --mat-border-radius-small: 4px;
+  --mat-border-radius-large: 12px;
+  --mat-border-radius-circle: 50%;
+
+  /* ======= 字体大小 ======= */
+  --mat-font-size-small: 12px;
+  --mat-font-size-medium: 14px;
+  --mat-font-size-large: 16px;
+  --mat-font-size-xlarge: 18px;
+
+  /* ======= 行高 ======= */
+  --mat-line-height-small: 1.4;
+  --mat-line-height-medium: 1.5;
+  --mat-line-height-large: 1.6;
+
+  /* ======= 间距 ======= */
+  --mat-space-xs: 4px;
+  --mat-space-sm: 8px;
+  --mat-space-md: 16px;
+  --mat-space-lg: 24px;
+  --mat-space-xl: 32px;
+
+  /* ======= 阴影 ======= */
+  --mat-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --mat-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --mat-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+  /* ======= 过渡 ======= */
+  --mat-transition-fast: 0.2s ease;
+  --mat-transition-normal: 0.3s ease;
+  --mat-transition-slow: 0.5s ease;
+
+  /*========性别 ========*/
+  --mat-gender-male: #a1afeb;
+  --mat-gender-female: #f5cbd4;
+}
+
+// 示例：全局按钮样式
+.mat-button {
+  background-color: $mat-touch-primary-color;
+  color: #fff;
+  border-radius: $mat-touch-border-radius;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $mat-touch-primary-hover;
+  }
+
+  &:active {
+    background-color: $mat-touch-primary-active;
+  }
+
+  &:disabled {
+    background-color: $mat-touch-primary-disabled;
+    cursor: not-allowed;
+  }
+}

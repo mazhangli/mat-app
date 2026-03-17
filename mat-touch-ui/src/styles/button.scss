@@ -1,0 +1,17 @@
+.mat-touch-button--small{
+    // 可选：添加 !important 提升优先级（如果 Material 内置样式覆盖了你的样式）
+        width: 4.5rem !important;
+        height: 2.3rem !important;
+    }
+    .mat-touch-button--normal {
+        width: 5.5rem !important;
+        height: 2.5rem !important;
+    }
+    .mat-touch-button--large {
+        width: 5.5rem !important;
+        height: 2.7rem !important;
+    }
+    .mat-touch-button--xlarger {
+        width: 6.5rem !important;
+        height: 3.2rem !important;
+    }
