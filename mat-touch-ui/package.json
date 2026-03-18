@@ -36,7 +36,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -p tsconfig.json --emitDeclarationOnly --outDir dist/types && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "link": "npm link",
+    "unlink": "npm unlink"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",

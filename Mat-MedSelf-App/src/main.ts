@@ -1,7 +1,8 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
-// import router from "@/router";
+import router from "./router";
+import { setupPinia } from "./stores";
 import MatTouchUI, { loadThemeConfig, applyThemeConfig, setRem } from "mat-touch-ui";
 import "mat-touch-ui/dist/mat-touch-ui.css";
 import repeatDirective from "./tools/repeatDirective";
@@ -20,8 +21,9 @@ async function initApp() {
   setRem(1920); //设置 Rem
   await initTheme();
   const app = createApp(App);
+  setupPinia(app);
+  app.use(router);
   app.use(MatTouchUI);
-  // app.use(router);
   app.directive("repeat-click", repeatDirective); //防止長時間觸摸
   app.directive("preventReClick", preventReClick); //防止連擊
   app.mount("#app");

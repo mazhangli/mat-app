@@ -1,30 +1,29 @@
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <!-- 区分缓存/非缓存路由，添加过渡动画 -->
+    <transition name="router-fade" mode="out-in">
+      <router-view v-if="!$route.meta.keepAlive" :key="$route.fullPath" />
+    </transition>
+
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive" :key="$route.fullPath" />
+    </keep-alive>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script setup lang="ts">
+// 无需额外代码，路由由router/index.ts全局管理
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* 路由过渡动画 */
+.router-fade-enter-from,
+.router-fade-leave-to {
+  opacity: 0;
+  transform: translateX(10px);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: all 0.3s ease;
 }
 </style>

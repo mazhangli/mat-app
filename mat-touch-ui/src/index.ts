@@ -13,12 +13,14 @@ import "@/styles/fonts.scss";
 import "@/styles/index.scss";
 // 导入组件
 import MatTouchButton from "./components/TouchButton/TouchButton.vue";
-import MatTouchSwiper from "./components/TouchSwiper/TouchSwiper.vue";  
+import MatTouchSwiper from "./components/TouchSwiper/TouchSwiper.vue";
+import Mat404 from "./components/Mat404/Mat404.vue";
 
 // 所有组件列表
 const components = {
   MatTouchButton,
   MatTouchSwiper,
+  Mat404,
   ...VantComponents,
   ...ElementComponents,
 };
@@ -34,12 +36,13 @@ const MatTouchUI = {
   install,
   MatTouchButton,
   MatTouchSwiper,
+  Mat404,
   loadThemeConfig,
   applyThemeConfig,
   setRem,
 };
 export default MatTouchUI;
 // 单独导出工具函数
-export { MatTouchButton, MatTouchSwiper, loadThemeConfig, applyThemeConfig, setRem };
+export { MatTouchButton, MatTouchSwiper, Mat404, loadThemeConfig, applyThemeConfig, setRem };
 
 export * from "./types";
