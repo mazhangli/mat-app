@@ -1,10 +1,10 @@
 <template>
   <!-- 直接使用子项目的Mat404组件，自定义文案+绑定事件 -->
   <Mat404
-    message="医疗自助机页面未找到"
+    message="页面未找到"
     tips="请检查网络或联系工作人员处理"
-    home-text="返回自助首页"
-    refresh-text="重新加载页面"
+    home-text="返回首页"
+    refresh-text="重新加载"
     @home-click="goToHome"
     @refresh-click="refreshPage"
   />

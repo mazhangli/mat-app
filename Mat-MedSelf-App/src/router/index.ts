@@ -15,14 +15,14 @@ const publicRoutes: RouteRecordRaw[] = [
     redirect: '/home', // 默认跳首页
   },
   {
-    path: '/404',
+    path: '/NotFound',
     name: 'NotFound',
-    component: () => import('@/views/NotFoundWrapper.vue'), // 404页面
+    component: () => import("@/views/PageNotFound.vue"),
     meta: { title: '页面不存在' },
   },
   {
     path: '/:pathMatch(.*)*', // 兜底路由
-    redirect: '/404',
+    redirect: '/NotFound',
   },
 ];
 

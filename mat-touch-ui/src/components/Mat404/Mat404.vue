@@ -6,12 +6,12 @@
       <div class="message">{{ message }}</div>
       <div class="tips">{{ tips }}</div>
       <div class="btn-group">
-        <button class="btn home-btn" @click="handleHomeClick">
+        <van-button class="btn home-btn" round @click="handleHomeClick"> 
           {{ homeText }}
-        </button>
-        <button class="btn refresh-btn" @click="handleRefreshClick">
+        </van-button>
+        <van-button class="btn refresh-btn" round @click="handleRefreshClick">
           {{ refreshText }}
-        </button>
+        </van-button>
       </div>
     </div>
   </div>
@@ -61,17 +61,33 @@ const handleRefreshClick = () => {
   width: 100vw;
   height: 100vh;
   background: #f0f4f8;
+  /* Flex 布局：强制子元素垂直+水平居中 */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* 垂直居中（关键属性） */
+  justify-content: center; /* 水平居中 */
+  overflow: hidden; /* 防止滚动条 */
+  /* 兜底：兼容旧浏览器 */
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
 }
 
 .content {
+  width: 100vw;
+  height: 100vh;
   text-align: center;
-  padding: 40px 60px;
   background: white;
-  border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 120, 212, 0.1);
+   /* Flex 布局：强制子元素垂直+水平居中 */
+  display: flex;
+  flex-direction: column; /* 垂直排列子元素 */
+  align-items: center; /* 垂直居中（关键属性） */
+  justify-content: center; /* 水平居中 */
+  overflow: hidden; /* 防止滚动条 */
+  /* 兜底：兼容旧浏览器 */
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
 }
 
 .icon {
@@ -124,7 +140,7 @@ const handleRefreshClick = () => {
 .refresh-btn {
   background: #eaeff4;
   color: #0078d7;
-  border: 1px solid #cbd5e0;
+  /* border: 1px solid #cbd5e0; */
 }
 
 .btn:active {
